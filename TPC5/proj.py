@@ -40,7 +40,7 @@ def process_text(text):
             f.write(f"{entity.text:<23} ||| {entity.label_:<23} ||| {entity.text:<23}\n")
 
 # Example text
-text = ("O Fernando e o Daniel são jovens irmãos e foram eleitos para a Assembeleia em Braga. No entanto, um deles rescindiu. Agora, tem 90 dias para a apresentar justificação!")
+text = ("O Fernando e o Daniel são jovens irmãos e foram eleitos para a Assembeleia em Braga. No entanto, um deles rescindiu. Agora, tem 90 dias para apresentar justificação!")
 process_text(text)
 
 # Analyze syntax

@@ -29,7 +29,6 @@ tem                     ||| Verbo                   ||| ter
 90                      ||| Número                  ||| 90                     
 dias                    ||| Substantivo             ||| dia                    
 para                    ||| Conjunção subordinativa ||| para                   
-a                       ||| Conjunção subordinativa ||| a                      
 apresentar              ||| Verbo                   ||| apresentar             
 justificação            ||| Substantivo             ||| justificação           
 !                       ||| Pontuação               ||| !                      
