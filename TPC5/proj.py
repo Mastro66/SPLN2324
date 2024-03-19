@@ -48,19 +48,21 @@ process_text(text)
 
 # Analyze syntax
 doc = nlp(text)  # Define the 'doc' variable
-print("Noun phrases:", [chunk.text for chunk in doc.noun_chunks])
-print("Verbs:", [token.lemma_ for token in doc if token.pos_ == "VERB"])
-print("Nouns:", [token.lemma_ for token in doc if token.pos_ == "NOUN"])
-print("Adjectives:", [token.lemma_ for token in doc if token.pos_ == "ADJ"])
-print("Adverbs:", [token.lemma_ for token in doc if token.pos_ == "ADV"])
-print("Pronouns:", [token.lemma_ for token in doc if token.pos_ == "PRON"])
-print("Prepositions:", [token.lemma_ for token in doc if token.pos_ == "ADP"])
-print("Conjunctions:", [token.lemma_ for token in doc if token.pos_ == "CCONJ"])
-print("Determiners:", [token.lemma_ for token in doc if token.pos_ == "DET"])
-print("Punctuation:", [token.lemma_ for token in doc if token.pos_ == "PUNCT"])
-print("Numbers:", [token.lemma_ for token in doc if token.pos_ == "NUM"])
-
+# print("Noun phrases:", [chunk.text for chunk in doc.noun_chunks])
+# print("Verbs:", [token.lemma_ for token in doc if token.pos_ == "VERB"])
+# print("Nouns:", [token.lemma_ for token in doc if token.pos_ == "NOUN"])
+# print("Adjectives:", [token.lemma_ for token in doc if token.pos_ == "ADJ"])
+# print("Adverbs:", [token.lemma_ for token in doc if token.pos_ == "ADV"])
+# print("Pronouns:", [token.lemma_ for token in doc if token.pos_ == "PRON"])
+# print("Prepositions:", [token.lemma_ for token in doc if token.pos_ == "ADP"])
+# print("Conjunctions:", [token.lemma_ for token in doc if token.pos_ == "CCONJ"])
+# print("Determiners:", [token.lemma_ for token in doc if token.pos_ == "DET"])
+# print("Punctuation:", [token.lemma_ for token in doc if token.pos_ == "PUNCT"])
+# print("Numbers:", [token.lemma_ for token in doc if token.pos_ == "NUM"])
 
 # Find named entities, phrases and concepts
-for entity in doc.ents:
-    print(entity.text, entity.label_)
+#for entity in doc.ents:
+#    print(entity.text, entity.label_)
+
+## Informação associada ao spacy
+# PART OF SPEECH are (POS) TAGS

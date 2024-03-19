@@ -8,7 +8,7 @@
 
 ### Acerca do TPC
 
-Fazer um programa que processe um ficheiro que descreva e analise quais as palavras, o seu tipo e o Lema.
+Fazer um programa que processe um ficheiro que descreva e analise quais as palavras, o seu tipo e o Lema e sejam impressos num output.txt.
 
 
 ### Comando de Execução
