@@ -3,7 +3,7 @@
 import spacy
 
 # Load Portuguese tokenizer, tagger, parser, and NER
-nlp = spacy.load("pt_core_news_sm")
+nlp = spacy.load("pt_core_news_lg")
 
 # Dictionary to map spaCy POS tags to Portuguese descriptions
 pos_tags_pt = {

@@ -6,7 +6,7 @@ o                       ||| Determinante            ||| o
 Daniel                  ||| Nome próprio            ||| Daniel                 
 são                     ||| Verbo auxiliar          ||| ser                    
 jovens                  ||| Adjetivo                ||| jovem                  
-irmãos                  ||| Adjetivo                ||| irmão                  
+irmãos                  ||| Substantivo             ||| irmão                  
 e                       ||| Conjunção coordenativa  ||| e                      
 foram                   ||| Verbo auxiliar          ||| ser                    
 eleitos                 ||| Verbo                   ||| eleitos                
@@ -34,5 +34,4 @@ justificação            ||| Substantivo             ||| justificação
 !                       ||| Pontuação               ||| !                      
 Fernando                ||| PER                     ||| Fernando               
 Daniel                  ||| PER                     ||| Daniel                 
-Assembeleia             ||| LOC                     ||| Assembeleia            
 Braga                   ||| LOC                     ||| Braga                  
