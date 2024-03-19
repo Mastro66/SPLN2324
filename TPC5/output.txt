@@ -1,37 +1,39 @@
-PALAVRAS                ||| TIPO                    ||| LEMA                   
-O                       ||| Determinante            ||| o                      
-Fernando                ||| Nome próprio            ||| Fernando               
-e                       ||| Conjunção coordenativa  ||| e                      
-o                       ||| Determinante            ||| o                      
-Daniel                  ||| Nome próprio            ||| Daniel                 
-são                     ||| Verbo auxiliar          ||| ser                    
-jovens                  ||| Adjetivo                ||| jovem                  
-irmãos                  ||| Substantivo             ||| irmão                  
-e                       ||| Conjunção coordenativa  ||| e                      
-foram                   ||| Verbo auxiliar          ||| ser                    
-eleitos                 ||| Verbo                   ||| eleitos                
-para                    ||| Preposição              ||| para                   
-a                       ||| Determinante            ||| o                      
-Assembeleia             ||| Nome próprio            ||| Assembeleia            
-em                      ||| Preposição              ||| em                     
-Braga                   ||| Nome próprio            ||| Braga                  
-.                       ||| Pontuação               ||| .                      
-No                      ||| Preposição              ||| em o                   
-entanto                 ||| Substantivo             ||| entanto                
-,                       ||| Pontuação               ||| ,                      
-um                      ||| Número                  ||| um                     
-deles                   ||| Pronome                 ||| de ele                 
-rescindiu               ||| Verbo                   ||| rescindir              
-.                       ||| Pontuação               ||| .                      
-Agora                   ||| Advérbio                ||| agora                  
-,                       ||| Pontuação               ||| ,                      
-tem                     ||| Verbo                   ||| ter                    
-90                      ||| Número                  ||| 90                     
-dias                    ||| Substantivo             ||| dia                    
-para                    ||| Conjunção subordinativa ||| para                   
-apresentar              ||| Verbo                   ||| apresentar             
-justificação            ||| Substantivo             ||| justificação           
-!                       ||| Pontuação               ||| !                      
-Fernando                ||| PER                     ||| Fernando               
-Daniel                  ||| PER                     ||| Daniel                 
-Braga                   ||| LOC                     ||| Braga                  
+| PALAVRAS                ||| TIPO                    ||| LEMA                   | 
+| ----------------------- ||| ----------------------- ||| -----------------------| 
+| O                       ||| Determinante            ||| o                      | 
+| Fernando                ||| Nome próprio            ||| Fernando               | 
+| e                       ||| Conjunção coordenativa  ||| e                      | 
+| o                       ||| Determinante            ||| o                      | 
+| Daniel                  ||| Nome próprio            ||| Daniel                 | 
+| são                     ||| Verbo auxiliar          ||| ser                    | 
+| jovens                  ||| Adjetivo                ||| jovem                  | 
+| irmãos                  ||| Substantivo             ||| irmão                  | 
+| e                       ||| Conjunção coordenativa  ||| e                      | 
+| foram                   ||| Verbo auxiliar          ||| ser                    | 
+| eleitos                 ||| Verbo                   ||| eleitos                | 
+| para                    ||| Preposição              ||| para                   | 
+| a                       ||| Determinante            ||| o                      | 
+| Assembeleia             ||| Nome próprio            ||| Assembeleia            | 
+| em                      ||| Preposição              ||| em                     | 
+| Braga                   ||| Nome próprio            ||| Braga                  | 
+| .                       ||| Pontuação               ||| .                      | 
+| No                      ||| Preposição              ||| em o                   | 
+| entanto                 ||| Substantivo             ||| entanto                | 
+| ,                       ||| Pontuação               ||| ,                      | 
+| um                      ||| Número                  ||| um                     | 
+| deles                   ||| Pronome                 ||| de ele                 | 
+| rescindiu               ||| Verbo                   ||| rescindir              | 
+| .                       ||| Pontuação               ||| .                      | 
+| Agora                   ||| Advérbio                ||| agora                  | 
+| ,                       ||| Pontuação               ||| ,                      | 
+| tem                     ||| Verbo                   ||| ter                    | 
+| 90                      ||| Número                  ||| 90                     | 
+| dias                    ||| Substantivo             ||| dia                    | 
+| para                    ||| Conjunção subordinativa ||| para                   | 
+| apresentar              ||| Verbo                   ||| apresentar             | 
+| justificação            ||| Substantivo             ||| justificação           | 
+| !                       ||| Pontuação               ||| !                      | 
+| Fernando                ||| PER                     ||| Fernando               | 
+| Daniel                  ||| PER                     ||| Daniel                 | 
+| Braga                   ||| LOC                     ||| Braga                  | 
+| ----------------------- ||| ----------------------- ||| -----------------------| 

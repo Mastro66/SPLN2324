@@ -29,15 +29,18 @@ def process_text(text):
     
     # Open the output file in write mode
     with open('output.txt', 'w') as f:
-        f.write(f"{'PALAVRAS':<23} ||| {'TIPO':<23} ||| {'LEMA':<23}\n")
+        f.write(f"| {'PALAVRAS':<23} ||| {'TIPO':<23} ||| {'LEMA ':<23}| \n")
+        f.write(f"| {'-'*23} ||| {'-'*23} ||| {'-'*23}| \n")
         # Analyze syntax and named entities
         for token in doc:
             pos_pt = pos_tags_pt.get(token.pos_, token.pos_)
-            f.write(f"{token.text:<23} ||| {pos_pt:<23} ||| {token.lemma_:<23}\n")
+            f.write(f"| {token.text:<23} ||| {pos_pt:<23} ||| {token.lemma_:<23}| \n")
         
         # Find named entities, phrases, and concepts
         for entity in doc.ents:
-            f.write(f"{entity.text:<23} ||| {entity.label_:<23} ||| {entity.text:<23}\n")
+            f.write(f"| {entity.text:<23} ||| {entity.label_:<23} ||| {entity.text:<23}| \n")
+
+        f.write(f"| {'-'*23} ||| {'-'*23} ||| {'-'*23}| \n")
 
 # Example text
 text = ("O Fernando e o Daniel são jovens irmãos e foram eleitos para a Assembeleia em Braga. No entanto, um deles rescindiu. Agora, tem 90 dias para apresentar justificação!")
