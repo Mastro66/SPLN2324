@@ -1,61 +1,86 @@
 #!/usr/bin/env python3
-
-# Documentação que fica guardada na variável __doc__
 '''
 NAME
-   word_freq - Calculates word frequency in a text
+   word_freq - Calculate word frequency of a text
 
 SYNOPSIS
    word_freq [options] input_files
-   options: 
-        -m 20 : Show 20 most common
-        -n : Order alfabetically
-        -o : Change all Capital letters to lower case
+   options:
+    -m 20 - Shows 20 most frequent words
+    -n - Shows words ordered alphabetically
+    -i - capitilization by referencial
+
 Description'''
 
-
 from jjcli import * 
-from collections import Counter # Dicionario chave - nº ocorrencias (multi-set)
+import sys
 import re
+from collections import Counter
+__version__ = "1.1.0"
 
-__version__ = "0.0.1"
 
 def tokeniza(texto):
-    palavras = re.findall(r'\w+(?:\-\w+)?|[,;.:_?!—]+', texto)
-    # (?: ...) agrupa mas não captura
-    return palavras
+    palavras = re.findall(r"\w+(?:\-\w+)?",texto)
+    pontuacao = re.findall(r"[;,.:!?_—]+",texto)
+    print(f"Tem {len(palavras)} palavras e {len(pontuacao)} sinais")
+    return palavras + pontuacao
 
-def imprime(lista, opt):
-    if opt == 'm':
-        for palavra, n_ocorr in lista:
-            print(f"{palavra}   {n_ocorr}")
-    elif opt == 'n':
-        for palavra, n_ocorr in lista:
-            print(f"{n_ocorr}   {palavra}")
-    elif opt == 'o':
-        for palavra, n_ocorr in lista:
-            print(f"{n_ocorr}   {palavra}")
+#file = sys.argv[1]
+#out = sys.argv[2]
 def main():
-    # "-m" recebe um argumento logo leva ":", ao contrário de "-n"
-    cl=clfilter("nmo:", doc=__doc__)     ## option values in cl.opt dictionary
+    counter = Counter()
 
+    cl=clfilter("f:inm:", doc=__doc__)     ## option values in cl.opt dictionary
     for txt in cl.text():     ## process one file at the time
-        lista_palavras = tokeniza(txt)
-        ocorr = Counter(lista_palavras)
-
-        if "-m" in cl.opt:
-            imprime(ocorr.most_common(int(cl.opt.get("-m"))), 'm')
-        elif "-n" in cl.opt:
-            lista_palavras.sort()
-            ocorr = Counter(lista_palavras)
-            imprime(ocorr.items(), 'n')
-        elif "-o" in cl.opt: # turn the capital letters into lower case
-            lista_palavras.lower()
-            ocorr = Counter(lista_palavras)
-            imprime(ocorr.items(), 'o')
+        listaPal = tokeniza(txt)
+        counter = Counter(listaPal)
+        eliminar = []
+        if "-i" in cl.opt:
+            for elem,count in counter.items():
+                if 'A'<=elem[0]<='Z':
+                    elem2 = elem.lower()
+                    if elem2 in counter:
+                        if counter[elem2] > count:
+                            counter[elem2]+=count
+                            eliminar.append(elem)
+                        else:
+                            counter[elem]+=counter[elem2]
+                            eliminar.append(elem2)
+            for elem in eliminar:
+                counter.pop(elem)   
+        if "-f" in cl.opt:
+            eliminar = []
+            #ler o ficheiro e por 
+            with open("wordTablePT.txt") as f:
+                frequenciesRatio = {}
+                totalFreq = int(f.readline())
+                for line in f.readlines():
+                    word,frequency  = line.split(" ")
+                    frequenciesRatio[word]=int(frequency)/totalFreq
+            total_frequency = sum(counter.values())
+            for elem,n in counter.items():
+                if elem in frequenciesRatio:
+                    ratio = (n/total_frequency)/frequenciesRatio[elem]
+                    if ratio<2:
+                        if elem in frequenciesRatio:
+                            eliminar.append(elem)
+            for elem in eliminar:
+                counter.pop(elem)     
+                
+        listCounter = list(counter.items())
+        if "-n" in cl.opt:  listCounter.sort(key = lambda a: a[0])
+        else:  listCounter.sort(key = lambda a: -a[1])
+        if "-m" in cl.opt:  
+            for word, frequency in listCounter[:int(cl.opt.get("-m"))]:
+                if "-n" in cl.opt: print(f"{word}: {frequency}")
+                else: print(f"{frequency}: {word}")
         else:
-            imprime(ocorr.items(), 'm')
+            for word, frequency in listCounter:
+                if "-n" in cl.opt: print(f"{word}: {frequency}")
+                else: print(f"{frequency}: {word}")
 
+if __name__ == '__main__':
+    main()
 
 ### TPC
 # 1. Arranjar/procurar uma tabela padrão de frequenicas do portugues - Sugestão: no tio google perguntar tabela da frequencia das palavras portuguesas

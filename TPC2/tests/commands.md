@@ -9,4 +9,5 @@ wfreq -n tests/Camilo-Amor_de_Perdicao.md | more
                                           | rg -iw 'Não'
                                           | rg -iw 'Se'
       -o                                  | rg -iw 'Não'
+      -i
       -m 20
