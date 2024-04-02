@@ -2,6 +2,9 @@
 # python -m spacy download en_core_web_sm
 import spacy
 
+from spacy import displacy
+
+
 # Load Portuguese tokenizer, tagger, parser, and NER
 nlp = spacy.load("pt_core_news_lg")
 
@@ -26,6 +29,7 @@ pos_tags_pt = {
 def process_text(text):
     # Process the whole document
     doc = nlp(text)
+    # displacy.serve(doc, style="dep")  # Serve the dependency parse visualization
     
     # Open the output file in write mode
     with open('output.txt', 'w') as f:
@@ -48,6 +52,7 @@ process_text(text)
 
 # Analyze syntax
 doc = nlp(text)  # Define the 'doc' variable
+# displacy.serve(doc, style="dep")  # Serve the dependency parse visualization
 # print("Noun phrases:", [chunk.text for chunk in doc.noun_chunks])
 # print("Verbs:", [token.lemma_ for token in doc if token.pos_ == "VERB"])
 # print("Nouns:", [token.lemma_ for token in doc if token.pos_ == "NOUN"])
@@ -66,3 +71,9 @@ doc = nlp(text)  # Define the 'doc' variable
 
 ## Informação associada ao spacy
 # PART OF SPEECH are (POS) TAGS
+
+#token.text, token.lemma_, token.pos_, token.tag_, token.dep_, token.shape_, token.is_alpha, token.is_stop
+# https://spacy.io/api/token
+
+# token.dep_ 
+# (list{token.children})
