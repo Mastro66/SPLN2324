@@ -1,3 +1,5 @@
+### Criar projeto wfreq, de modo a ser capaz de contar a frequencia de palavras de qualquer ficheiro
+
 ### UC - SPLN
 
 ### Autor
